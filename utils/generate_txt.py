@@ -1,8 +1,8 @@
 """
 Generate a data paired txt file for caffe training
 """
-from utils import *
 import sys,argparse
+import random,os
 ### the following does not need to be modified #####
 def main(args):
     data_list = 'train.lst'
