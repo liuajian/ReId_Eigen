@@ -36,6 +36,7 @@
     ```Shell
 ## Usage
 Note: In this session, we assume you are in the directory $ROOT_PATH/
+
 Part 1: Preprocessing
  ```Shell
 - Download the Market-1501-v15.09.15.zip and place it in the $root_path/$datasets directory
@@ -55,7 +56,7 @@ Part 2: Training
     ```Shell
   bash start_reid.sh Step_3=True
     ```
-Part 2: Testing
+Part 3: Testing
 - Extracting features by python and testing by matlab
     ```Shell
   bash start_reid.sh Step_4=True
