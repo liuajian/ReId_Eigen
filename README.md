@@ -11,9 +11,9 @@
 ## The experiments is performed on our caffe
 - Our [caffe-DDM](https://github.com/liuajian/caffe-DDM) is a modified caffe fork (version of 2018/12/10) with several layers which providing whole training, testing and evaluation codes, reference on:
 - [caffe](https://github.com/BVLC/caffe)
-- [caffe](https://github.com/D-X-Y/caffe-reid)
-- [caffe](https://github.com/twtygqyy/caffe-augmentation)
-- [caffe](https://github.com/ydwen/caffe-face)
+- [caffe-reid](https://github.com/D-X-Y/caffe-reid)
+- [caffe-augmentation](https://github.com/twtygqyy/caffe-augmentation)
+- [caffe-face](https://github.com/ydwen/caffe-face)
 
 ## Datasets
 - [cuhk03](http://www.ee.cuhk.edu.hk/~rzhao/) 
@@ -25,7 +25,7 @@
 ## Installation
 - Clone the ReId_Eigen repository. We'll call the directory that you cloned ReId_Eigen as $ROOT_PATH.
     ```Shell
-  git clone --recursive https://github.com/wy1iu/sphereface.git
+  git clone --recursive https://github.com/liuajian/ReId_Eigen.git
     ```
 - Build Caffe and matcaffe
     ```Shell
@@ -36,14 +36,12 @@
     ```Shell
 ## Usage
 Note: In this session, we assume you are in the directory $ROOT_PATH/
-    ```Shell
 Part 1: Preprocessing
-    ```
+ ```Shell
 - Download the Market-1501-v15.09.15.zip and place it in the $root_path/$datasets directory
-    ```
 - Unzip $root_path/datasets/Market-1501-v15.09.15.zip 
 - Unzip $root_path/datasets/eigen_v2.zip 
-    ```
+   ```
 Part 2: Training
 - Generate the txt files needed for training, such as train.txt, query.txt, test.txt, training_pair.txt etc.
     ```Shell
@@ -63,13 +61,18 @@ Part 2: Testing
   bash start_reid.sh Step_4=True
     ```
 ## Results
-- Finally we have the `eigenbody_caffe.caffemodel`, extracted features `query/test_features.mat` in folder **`snapshot/`** and **`out_features/`** respectively.
+- Finally we have the `caffe.caffemodel`, extracted features `features.mat` in folder **`snapshot/`** and **`out_features/`** respectively.
 - The testing results of these methods based on multi-shot setting are as follows(%): 
-  Method|softmax(s)|eigen_softmax(es)|softmax_verification(sv)|center_loss(cs)
-  Rank-1|74.91|77.88|79.72|80.88
-  mAP|50.44|55.64|57.81|59.16
-
+   ```Shell
+   --------------------------------
+   |Method |  s  |  es |  sv |  cs |
+   |Rank-1 |74.91|77.88|79.72|80.88|
+   | mAP   |50.44|55.64|57.81|59.16|
+   --------------------------------
+  Note Method|s:softmax|es:eigen_softmax|sv:softmax_verification|cs:center_loss
+  ```
 ## Citation
+  ```Shell
 Please cite the following papers in your publications if it helps your research:
     @article{zheng2016discriminatively,
       title={A Discriminatively Learned CNN Embedding for Person Re-identification},
@@ -77,18 +80,19 @@ Please cite the following papers in your publications if it helps your research:
       journal={TOMM},
       year={2017}
     }
-@inproceedings{wen2016discriminative,
-  title={A Discriminative Feature Learning Approach for Deep Face Recognition},
-  author={Wen, Yandong and Zhang, Kaipeng and Li, Zhifeng and Qiao, Yu},
-  booktitle={European Conference on Computer Vision},
-  pages={499--515},
-  year={2016},
-  organization={Springer}
-}
-
-##Questions
-    ```Shell
+    @inproceedings{wen2016discriminative,
+      title={A Discriminative Feature Learning Approach for Deep Face Recognition},
+      author={Wen, Yandong and Zhang, Kaipeng and Li, Zhifeng and Qiao, Yu},
+      booktitle={European Conference on Computer Vision},
+      pages={499--515},
+      year={2016},
+      organization={Springer}
+    }
+  ```
+## Questions
+  ```Shell
 Please contact 'ajianliu92@gmail.com'
+ ```
 
 
 
