@@ -14,7 +14,7 @@ data_name=market1501
 Id_num=751
 network=res50
 gpu_id=1
-Batch_size=28
+Batch_size=14
 max_iter=50000
 feature_name="pool5"
 Mean_value="104,117,124"
@@ -35,9 +35,10 @@ fi
 ###########
 if $Step_1; then
 echo "Step 1: Generating the train.txt, query.txt, test.txt, training_pair.txt ..."
-
-unzip $root_path/datasets/Market-1501-v15.09.15.zip
-unzip $root_path/datasets/eigen_v2.zip
+cd datasets
+unzip Market-1501-v15.09.15.zip
+unzip eigen_v2.zip
+cd ..
 cd evaluation
 matlab -nodesktop -nosplash -r \
           "clc;clear all; \
@@ -47,7 +48,7 @@ Is_shuffle=true
 python utils/generate_txt.py \
           $data_path/ \
           $eigenbody_data/ \
-          --batch_size $Batch_size \
+          --batch_size 14 \
           --is_shuffle $Is_shuffle
 fi
 
