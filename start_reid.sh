@@ -129,12 +129,12 @@ if $Step_4; then
     echo "Step5: Testing the features extracted by python with matlab"
     cd evaluation
     matlab -nodesktop -nosplash -r \
-            "clc;clear all; \
-             netname='${network}_${methods[$i]}'; \
-             root_path='$root_path'; \
-             fea_mat_path='$fea_path'; \
-             is_extracting=false; \
-             type_fea='python';Market1501";
+          "clc;clear all; \
+           netname='${network}_${methods[$i]}'; \
+           root_path='$root_path'; \
+           fea_mat_path='$fea_path'; \
+           is_extracting=false; \
+           type_fea='python';Market1501";
     cd ..
   done
 fi
