@@ -33,7 +33,7 @@ def main(args):
     print('checking: %d * %d + %d =? %d' % (
     args.batch_size, len(div_lines) - 1, len(div_lines[len(div_lines) - 1]), len(lines)))
     if len(train_txt)%args.batch_size!=0:
-        print "Error in load batch_size()"
+        print("Error in load batch_size()")
         quit()
     ################## write txt ##################
     father_path = os.path.abspath(os.path.dirname(args.input_dir) + os.path.sep + "..")
