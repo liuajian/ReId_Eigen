@@ -33,7 +33,7 @@
   # Now follow the Caffe installation instructions here:
   # http://caffe.berkeleyvision.org/installation.html
   make all -j8 && make matcaffe
-    ```Shell
+    ```
 ## Usage
 Note: In this session, we assume you are in the directory $ROOT_PATH/
 
