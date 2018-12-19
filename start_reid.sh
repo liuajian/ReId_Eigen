@@ -120,7 +120,7 @@ if $Step_4; then
 	  --out_features $fea_path/ \
 	  --batch_size $Batch_size \
 	  --model_def $root_path/models/${network}_${methods[$i]}/deploy.prototxt \
-      --pretrained_model $model_file \
+          --pretrained_model $model_file \
 	  --gpu $gpu_id \
 	  --images_dim $Imae_h,$Imae_w \
 	  --mean_value 104,117,124 \
