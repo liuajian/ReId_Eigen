@@ -1,5 +1,5 @@
 ## Person Re-Identification based on Eigenbody
-- Eigenbody dataset(produced by by laboratory partners)
+- Eigenbody dataset (produced by by laboratory partners)
 
 ## Environment
 - Ubuntu or Windows
