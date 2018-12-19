@@ -92,7 +92,7 @@ Please cite the following papers in your publications if it helps your research:
   ```
 ## Questions
   ```Shell
-Please contact 'ajianliu92@gmail.com'
+Please contact ajianliu92@gmail.com
  ```
 
 
